@@ -16,4 +16,13 @@ describe('Venta', function(){
         venta.add(pantalla, 1);
         expect(venta.total()).equal(100);
     });
+
+    it('total de venta con un servicio deberia devolver el total del producto',function(){
+        let venta = new Venta();
+        let pantalla = new Articulo("Pantalla SMS 17",100);
+        let mantenimiento = new Servicio("Mantnimiento de celular SMS S9",15);
+        venta.add(pantalla,1)
+        venta.add(mantenimiento, 1);
+        expect(venta.total()).equal(215);
+    });
 });
