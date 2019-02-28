@@ -1,22 +1,18 @@
-let valor_total;
-let productos = [];
 class Venta{
     constructor(){
-        valor_total = 0;
+        this.productos = [];
     }
     total(){
-        this.cuantoPor();
+        let valor_total = 0;
+        this.productos.forEach(element => {
+            valor_total += element[0].cuantoPor(element[1]);
+        });
         return valor_total;
     }
     add(producto, cantidad){
         for(var i=0; i<cantidad; i++){
-            productos.push(producto);
+            this.productos.push([producto,cantidad]);
         }
-    }
-    cuantoPor(){
-        productos.forEach(function(producto){
-            valor_total += producto.getPrecio();
-        });
     }
 }
 module.exports = Venta;
