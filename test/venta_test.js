@@ -8,4 +8,11 @@ describe('Venta', function(){
         let venta = new Venta();
         expect(venta.total()).equal(0);
     });
+
+    it('total de venta con un producto deberia devolver el total del producto',function(){
+        let venta = new Venta();
+        let pantalla = new Articulo("Pantalla SMS 17",100);
+        venta.add(pantalla, 1);
+        expect(venta.total()).equal(100);
+    });
 });
