@@ -8,8 +8,10 @@ class Venta{
         this.cuantoPor();
         return valor_total;
     }
-    add(producto){
-        productos.push(producto);
+    add(producto, cantidad){
+        for(var i=0; i<cantidad; i++){
+            productos.push(producto);
+        }
     }
     cuantoPor(){
         productos.forEach(function(producto){

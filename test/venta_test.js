@@ -3,6 +3,8 @@ var should = require('chai').should();
 
 import Venta from '../Venta.js'
 import Articulo from '../Articulo.js'
+import Servicio from '../Servicio.js'
+import Producto from '../Producto.js'
 
 describe('Venta', function(){
     it('Total de venta sin producto deberia ser 0',function(){
@@ -21,8 +23,8 @@ describe('Venta', function(){
         let venta = new Venta();
         let pantalla = new Articulo("Pantalla SMS 17",100);
         let mantenimiento = new Servicio("Mantnimiento de celular SMS S9",15);
-        venta.add(pantalla,1)
+        venta.add(pantalla,1);
         venta.add(mantenimiento, 1);
-        expect(venta.total()).equal(215);
+        expect(venta.total()).equal(115);
     });
 });

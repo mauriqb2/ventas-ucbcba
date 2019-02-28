@@ -1,5 +1,5 @@
-let nombre;
-let precio;
+var nombre;
+var precio;
 class Producto{
     constructor(nombre_nuevo,precio_nuevo){
         nombre=nombre_nuevo;
