@@ -2,6 +2,7 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 
 import Venta from '../Venta.js'
+import Articulo from '../Articulo.js'
 
 describe('Venta', function(){
     it('Total de venta sin producto deberia ser 0',function(){
